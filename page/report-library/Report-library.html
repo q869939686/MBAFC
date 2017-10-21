@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>MB Finance</title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 MBAFC Template UI Theme" />
+    <meta name="author" content="My yu.miao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--bootstrape-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+
+    <!--引入font awesome-->
+    <link rel="stylesheet" href="../../vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--引入动画效果-->
+    <link rel="stylesheet" href="../../vendor/animate/animate.css">
+    <!--更改公共样式-->
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <!--引入模板样式-->
+    <link rel="stylesheet" href="../../assets/css/index_template.css">
+    <!--引入当前页面样式-->
+    <link rel="stylesheet" href="Report-library.css">
+    <!--引入mixitup-->
+    <link rel="stylesheet" href="../../vendor/mixitup/css/layout.css">
+    <link rel="stylesheet" href="../../vendor/mixitup/css/normalize.css">
+
+</head>
+<body>
+<div class="header">
+    <div id="logo" class="header_logo">
+        <span id="inLogo" style="font-size:17px;cursor: pointer;"><span style="font-weight: bold">MB</span>Finance</span>
+    </div>
+    <div class="header_brand">
+        <i id="brand" class="fa fa-bars" id="brand" style="cursor: pointer"></i>
+    </div>
+    <div class="header_diamond">
+        <i class="fa fa-diamond"></i>
+    </div>
+    <div class="header_user">
+        bbbbbbbbbb
+    </div>
+</div>
+<div class="main">
+    <div class="left">
+        <div class="left_sidebar">
+            <ul>
+                <li><i class="fa fa-heart"></i><span class="iconTitle">Favourite</span></li>
+                <li><i class="fa fa-book"></i><span class="iconTitle">Report-library</span></li>
+                <li><i class="fa fa-repeat"></i><span class="iconTitle">SSRS</span></li>
+                <li><i class="fa fa-home"></i><span class="iconTitle">Report-librarian</span></li>
+                <li><i class="fa fa-question"></i><span class="iconTitle">F&Q</span></li>
+                <li><i class="fa fa-pencil"></i><span class="iconTitle">Feedback</span></li>
+                <li><i class="fa fa-product-hunt"></i><span class="iconTitle">Process Tracking</span></li>
+            </ul>
+        </div>
+    </div>
+<!-----------------------到这是头部和导航栏模板------------------------------------------------------------------------------------------------------------->
+    <div id="right" class="right">
+        <div class="right_filter">
+            <div class="row">
+                <div class="col-xs-11">
+
+                    <ul id="filters" class="clearfix">
+
+                        <li><span class="filter active" data-filter="TM1 Tableau">All</span></li>
+
+                        <li><span class="filter" data-filter="TM1">TM1</span></li>
+
+                        <li><span class="filter" data-filter="Tableau">Tableau</span></li>
+
+
+                    </ul>
+                </div>
+                <div class="col-xs-1">
+                    <div class="btn-group" style="padding-top: 5px">
+                        <button type="button" class="btn btn-default to-grid">
+                            <span class="fa fa-th"></span>
+                        </button>
+                        <button type="button" class="btn btn-default to-list">
+                            <span class="fa fa-navicon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_report">
+<!--            <div class="detail_report tm1 col-xs-3" data-cat="tm1">1</div>
+            <div class="detail_report tableau col-xs-3" data-cat="tableau">2</div>
+            <div class="detail_report tm1 col-xs-3" data-cat="tm1">1</div>
+            <div class="detail_report tableau col-xs-3" data-cat="tableau">2</div>
+            <div class="detail_report tm1 col-xs-3" data-cat="tm1">1</div>
+            <div class="detail_report tableau col-xs-3" data-cat="tableau">2</div>
+            <div class="detail_report tm1 col-xs-3" data-cat="tm1">1</div>
+            <div class="detail_report tableau col-xs-3" data-cat="tableau">2</div>-->
+
+            <div >
+
+
+                <div id="portfoliolist">
+                    <div class="detail_report portfolio TM1" >TM1</div>
+                    <div class="detail_report portfolio Tableau" >Tableau</div>
+                    <div class="detail_report portfolio TM1" >TM1</div>
+                    <div class="detail_report portfolio Tableau" >Tableau</div>
+                    <div class="detail_report portfolio TM1" >TM1</div>
+                    <div class="detail_report portfolio Tableau" >Tableau</div>
+                    <div class="detail_report portfolio TM1" >TM1</div>
+                    <div class="detail_report portfolio Tableau" >Tableau</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../vendor/jQuery/jquery-1.11.3.js"></script>
+<script src="../../vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../assets/js/index_template.js"></script>
+<!--引入mixitup-->
+<script src="../../vendor/mixitup/js/jquery.easing.min.js"></script>
+<script src="../../vendor/mixitup/js/jquery.mixitup.min.js"></script>
+
+<script>
+    //mixitup筛选方法
+    $(function () {
+
+
+
+        var filterList = {
+
+
+
+            init: function () {
+
+
+
+                // MixItUp plugin
+
+                $('#portfoliolist').mixitup({
+
+                    targetSelector: '.portfolio',
+
+                    filterSelector: '.filter',
+
+                    effects: ['fade'],
+
+                    easing: 'snap',
+
+                    // call the hover effect
+
+                    onMixEnd: filterList.hoverEffect()
+
+                });
+
+
+
+            },
+
+
+
+            hoverEffect: function () {
+
+
+
+                // Simple parallax effect
+
+                $('#portfoliolist .portfolio').hover(
+
+                        function () {
+
+                            $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+
+                            $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+
+                        },
+
+                        function () {
+
+                            $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+
+                            $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+
+                        }
+
+                );
+
+
+
+            }
+
+
+
+        };
+
+
+
+        // Run the show!
+
+        filterList.init();
+
+
+
+
+
+    });
+
+</script>
+</body>
+</html>

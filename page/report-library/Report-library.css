@@ -1,0 +1,36 @@
+/*---------------更改导航模板默认样式--------------*/
+.left{
+    padding-left: 0px;
+}
+
+
+/*-----------------------------------------------*/
+
+
+.right{
+    vertical-align: top;
+    padding: 25px 20px 50px;
+    box-sizing: border-box;
+}
+
+.right_filter{
+    border-bottom: 1px solid #e7e7e7;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    box-sizing: border-box;
+}
+.right_report{
+    padding: 15px;
+    box-sizing: border-box;
+}
+.detail_report{
+    height: 200px;
+
+}
+
+
+
+
+
